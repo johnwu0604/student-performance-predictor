@@ -4,7 +4,7 @@ The goal of this project is to demonstrate a simple example of how to integrate 
 
 This project is to be used for introductory workshops aimed at teaching the basics of integrating ML into a Flask App.
 
-## Prequistes
+## Prerequistes
 
 Install the necessary python packages
 
@@ -23,7 +23,7 @@ python model.py
 
 ## Running The Flask App
 
-Run **application.py** from the root directory
+Run the **application.py** file from the root directory
 
 ```
 python application.py
