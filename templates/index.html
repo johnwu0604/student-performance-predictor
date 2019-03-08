@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Pass or Fail?</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./static/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./static/fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="./static/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="./static/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="./static/vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="./static/vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="./static/vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="./static/vendor/noui/nouislider.min.css">
+	<link rel="stylesheet" type="text/css" href="./static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="./static/css/main.css">
+</head>
+<body>
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" action="/" method="post">
+				<span class="contact100-form-title">
+					Will they pass this class? {{ state.result }} 
+				</span>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">School ("GP" or "MS")</span>
+					<input class="input100" type="text" name="school" value="{{ state.school }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Sex ("F" or "M")</span>
+					<input class="input100" type="text" name="sex" value="{{ state.sex }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Age (15 to 22)</span>
+					<input class="input100" type="text" name="age" value="{{ state.age }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Address ("U" - urban, or "R" - rural)</span>
+					<input class="input100" type="text" name="address" value="{{ state.address }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Family Size ("LE3" - <=3, "GT3" - >3)</span>
+					<input class="input100" type="text" name="famsize" value="{{ state.famsize }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Parent Status ("T" - together, "A" - apart</span>
+					<input class="input100" type="text" name="Pstatus" value="{{ state.Pstatus }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Mother's Education (0 - none,  1 - primary education (4th grade), 2 – 5th to 9th grade, 3 – secondary education or 4 – higher education)</span>
+					<input class="input100" type="text" name="Medu" value="{{ state.Medu }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Father's Education (0 - none,  1 - primary education (4th grade), 2 – 5th to 9th grade, 3 – secondary education or 4 – higher education)</span>
+					<input class="input100" type="text" name="Fedu" value="{{ state.Fedu }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Commute Time (1 - <15 min., 2 - 15 to 30 min., 3 - 30 min. to 1 hour, or 4 - >1 hour)</span>
+					<input class="input100" type="text" name="traveltime" value="{{ state.traveltime }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Weekly Study Time (1 - <2 hours, 2 - 2 to 5 hours, 3 - 5 to 10 hours, or 4 - >10 hours)</span>
+					<input class="input100" type="text" name="studytime" value="{{ state.studytime }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Past Failures (n if 1<=n<3, else 4)</span>
+					<input class="input100" type="text" name="failures" value="{{ state.failures }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Extra Educational Support ("yes" or "no")</span>
+					<input class="input100" type="text" name="schoolsup" value="{{ state.schoolsup }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Family Educational Support ("yes" or "no")</span>
+					<input class="input100" type="text" name="famsup" value="{{ state.famsup }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Paid Classes Within Subject ("yes" or "no")</span>
+					<input class="input100" type="text" name="paid" value="{{ state.paid }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Extra Curricular Activites ("yes" or "no")</span>
+					<input class="input100" type="text" name="activities" value="{{ state.activities }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Interested In Higher Education ("yes" or "no")</span>
+					<input class="input100" type="text" name="higher" value="{{ state.higher }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Internet Access At Home ("yes" or "no")</span>
+					<input class="input100" type="text" name="internet" value="{{ state.internet }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">In A Relationship ("yes" or "no")</span>
+					<input class="input100" type="text" name="romantic" value="{{ state.romantic }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Quality Of Family Relationships (1 - very bad to 5 - excellent)</span>
+					<input class="input100" type="text" name="famrel" value="{{ state.famrel }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Free Time (1 - very low to 5 - very high)</span>
+					<input class="input100" type="text" name="freetime" value="{{ state.freetime }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Social Activities (1 - very low to 5 - very high)</span>
+					<input class="input100" type="text" name="goout" value="{{ state.goout }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Weekday Alcohol Consumption (1 - very low to 5 - very high)</span>
+					<input class="input100" type="text" name="Dalc" value="{{ state.Dalc }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Weekend Alcohol Consumption (1 - very low to 5 - very high)</span>
+					<input class="input100" type="text" name="Walc" value="{{ state.Walc }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Health Status (1 - very bad to 5 - very good))</span>
+					<input class="input100" type="text" name="health" value="{{ state.health }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Absences (0 to 93)</span>
+					<input class="input100" type="text" name="absences" value="{{ state.absences }}">
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn" type="submit" value="submit">
+						<span>
+							Submit
+							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
+
+			</form>
+		</div>
+	</div>
+	<script src="./static/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="./static/vendor/animsition/js/animsition.min.js"></script>
+	<script src="./static/vendor/bootstrap/js/popper.js"></script>
+	<script src="./static/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="./static/vendor/select2/select2.min.js"></script>
+	<script src="./static/vendor/daterangepicker/moment.min.js"></script>
+	<script src="./static/vendor/daterangepicker/daterangepicker.js"></script>
+	<script src="./static/vendor/countdowntime/countdowntime.js"></script>
+	<script src="./static/vendor/noui/nouislider.min.js"></script>
+	<script src="./static/js/main.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+</body>
+</html>
