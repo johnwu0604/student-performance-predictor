@@ -1,8 +1,8 @@
 import pandas as pd
 from joblib import dump, load
 
-''' State Tracker class keeping track of current states in the frontend '''
-class State:
+''' State Tracker class for keeping track of current states in the frontend '''
+class StateTracker:
 
     def __init__(self, verbose=True):
         # set the initial states
@@ -62,5 +62,4 @@ class State:
         self.state['Walc'] = request.form['Walc']
         self.state['health'] = request.form['health']
         self.state['absences'] = request.form['absences']
-        return
         

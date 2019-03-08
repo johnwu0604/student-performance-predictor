@@ -5,11 +5,11 @@ from joblib import dump, load
 class Predictor:
 
     def __init__(self, verbose=True):
-        # load the trained model
-        model = load('model/model.joblib') 
+        # store list of columns
         self.columns = ['school','sex','age','address','famsize','Pstatus','Medu','Fedu','traveltime','studytime','failures','schoolsup',
             'famsup','paid','activities','higher','internet','romantic','famrel','freetime','goout','Dalc','Walc','health','absences']
-        self.model = model
+        # load the trained model
+        self.model = load('model/model.joblib') 
 
     ''' Preprocess feature data '''
     def preprocess(self, features):
@@ -55,7 +55,7 @@ class Predictor:
         data.append(request.form['Walc'])
         data.append(request.form['health'])
         data.append(request.form['absences'])
-        
+
         features = pd.DataFrame([data],columns=self.columns)
         return features
 
